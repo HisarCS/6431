@@ -992,9 +992,6 @@ nav[aria-label="breadcrumb"] {
 
 .job-thumb {
   border-radius: var(--border-radius-small);
-  background-color: var(--secondary-color);
-  height: 400px;
-  width: 500px;
   margin-bottom: 25px;
   padding: 25px;
   transition: all 0.5s ease;
@@ -1002,7 +999,7 @@ nav[aria-label="breadcrumb"] {
 
 .job-thumb:hover,
 .job-thumb:nth-of-type(even) {
-  background: #FFFFFF;
+  background: var(--white-color);
   box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
 }
 
@@ -1029,13 +1026,8 @@ nav[aria-label="breadcrumb"] {
 
 .job-thumb-box .job-body {
   padding: 25px;
-  display: none;
 }
 
-.job-thumb .job-image-wrap {
-  margin-left: auto;
-  margin-right: auto;
-}
 .job-thumb-box .job-body .job-image-wrap {
   width: 50px;
   min-width: 50px;
@@ -1164,6 +1156,206 @@ nav[aria-label="breadcrumb"] {
 
 .job-section-btn-wrap {
   margin-left: auto;
+}
+
+
+/*---------------------------------------
+  Job Thumb Card               
+-----------------------------------------*/
+@media (hover: hover){
+  .job-thumb-card.job-thumb {
+    position: relative;
+    border-radius: var(--border-radius-small);
+    background-color: var(--secondary-color);
+    height: 300px;
+    width: 500px;
+    margin-bottom: 25px;
+    padding: 25px;
+    transition: all 0.5s ease;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .job-thumb-card .job-thumb-box {
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    max-width: 400px;
+    margin-bottom: 48px;
+    padding: 0;
+    border: 0;
+  }
+
+  .job-thumb-card .job-title .job-title-link {
+    opacity: 0;
+    transition: all 0.3s ease 0.4s;
+  }
+  .job-thumb-card.job-thumb:hover .job-title .job-title-link {
+    opacity: 1;
+  }
+
+  .job-thumb-card .job-thumb-box .job-text {
+    text-align: left;
+    min-width: inherit;
+    opacity: 0;
+    margin-right: 0;
+    margin-left: 0;
+    transition: all 0.3s ease 0.65s;
+    font-size: 14px;
+  }
+  .job-thumb-card:hover .job-thumb-box .job-text {
+    opacity: 1;
+  }
+
+  .job-thumb-card .job-thumb-box .job-section-btn-wrap {
+    opacity: 0;
+    transition: all 0.3s ease 0.8s;
+    margin-top: 1rem;
+  }
+
+  .job-thumb-card:hover .job-thumb-box .job-section-btn-wrap {
+    opacity: 1;
+  }
+
+  .job-thumb-card .job-body {
+    display: flex;
+    opacity: 0;
+    z-index: 1;
+    border: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .job-thumb-card .job-thumb-box .job-section-btn-wrap .custom-btn {
+    padding: 10px 15px;
+  }
+  .job-thumb-card.job-thumb:hover .job-body {
+    opacity: 1;
+  }
+
+  .job-thumb-card.job-thumb-box {
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    max-width: 400px;
+    margin-bottom: 48px;
+    padding: 0;
+  }
+
+  .job-thumb-card .job-thumb:hover .job-image-wrap .job-image {
+    opacity: 0;
+  }
+
+  .job-image {
+    display: block;
+    margin: auto;
+    padding: 25px;
+    transition: all 0.8s linear;
+  }
+
+  .job-thumb-card .job-image-wrap {
+    position: absolute;
+    border-radius: var(--border-radius-large);
+    width: 80px;
+    min-width: 80px;
+    height: 80px;
+    transition: all 0.7s ease;
+    background-position: right 10px top 10px;
+  }
+
+  .job-thumb-card.job-thumb:hover .job-image-wrap .job-image {
+    opacity: 0;
+  }
+
+  .job-thumb-card.job-thumb:hover .job-image-wrap {
+    transform: scale(7.2);
+  }
+}
+@media (hover: none){
+  .job-thumb-card.job-thumb {
+    position: relative;
+    border-radius: var(--border-radius-small);
+    background-color: var(--secondary-color);
+    height: 300px;
+    width: 500px;
+    margin-bottom: 25px;
+    padding: 25px;
+    transition: all 0.5s ease;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .job-thumb-card .job-thumb-box {
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    max-width: 400px;
+    margin-bottom: 48px;
+    padding: 0;
+    border: 0;
+  }
+
+  .job-thumb-card .job-title .job-title-link {
+    opacity: 1;
+  }
+
+  .job-thumb-card .job-thumb-box .job-text {
+    text-align: left;
+    min-width: inherit;
+    opacity: 1;
+    margin-right: 0;
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .job-thumb-card .job-thumb-box .job-section-btn-wrap {
+    opacity: 1;
+    margin-top: 1rem;
+  }
+
+
+  .job-thumb-card .job-body {
+    display: flex;
+    opacity: 1;
+    z-index: 1;
+    border: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .job-thumb-card .job-thumb-box .job-section-btn-wrap .custom-btn {
+    padding: 10px 15px;
+  }
+
+  .job-thumb-card.job-thumb-box {
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    max-width: 400px;
+    margin-bottom: 48px;
+    padding: 0;
+  }
+
+  .job-image {
+    display: block;
+    margin: auto;
+    padding: 25px;
+  }
+
+  .job-thumb-card .job-image-wrap {
+    position: absolute;
+    border-radius: var(--border-radius-large);
+    width: 80px;
+    min-width: 80px;
+    height: 80px;
+    transform: scale(7.2);
+    background-position: right 10px top 10px;
+  }
+
+  .job-thumb-card.job-thumb .job-image-wrap .job-image {
+    opacity: 0;
+  }
+
 }
 
 
