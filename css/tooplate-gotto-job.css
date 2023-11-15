@@ -992,6 +992,9 @@ nav[aria-label="breadcrumb"] {
 
 .job-thumb {
   border-radius: var(--border-radius-small);
+  background-color: var(--secondary-color);
+  height: 400px;
+  width: 500px;
   margin-bottom: 25px;
   padding: 25px;
   transition: all 0.5s ease;
@@ -999,7 +1002,7 @@ nav[aria-label="breadcrumb"] {
 
 .job-thumb:hover,
 .job-thumb:nth-of-type(even) {
-  background: var(--white-color);
+  background: #FFFFFF;
   box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
 }
 
@@ -1026,8 +1029,13 @@ nav[aria-label="breadcrumb"] {
 
 .job-thumb-box .job-body {
   padding: 25px;
+  display: none;
 }
 
+.job-thumb .job-image-wrap {
+  margin-left: auto;
+  margin-right: auto;
+}
 .job-thumb-box .job-body .job-image-wrap {
   width: 50px;
   min-width: 50px;
